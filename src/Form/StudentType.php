@@ -21,7 +21,7 @@ class StudentType extends AbstractType
         ->add('DoB', DateType::class,['widget' => 'single_text'])
         ->add('MajorID', EntityType::class, [
             'class' => Major::class,
-            'choice_label' => 'id'
+            'choice_label' => 'MajorName'
         ]);
     }
 
