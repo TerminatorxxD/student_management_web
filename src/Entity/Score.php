@@ -43,7 +43,7 @@ class Score
         return $this->id;
     }
 
-    public function getStudentID(): ?Student
+    public function getStudentID(): ?int
     {
         return $this->StudentID;
     }
@@ -55,7 +55,7 @@ class Score
         return $this;
     }
 
-    public function getSubjectID(): ?Subject
+    public function getSubjectID(): ?int
     {
         return $this->SubjectID;
     }
