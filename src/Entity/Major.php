@@ -25,11 +25,6 @@ class Major
     private $MajorName;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $Batch;
-
-    /**
      * @ORM\OneToMany(targetEntity=Student::class, mappedBy="MajorID")
      */
     private $students;
@@ -58,18 +53,6 @@ class Major
     public function setMajorName(string $MajorName): self
     {
         $this->MajorName = $MajorName;
-
-        return $this;
-    }
-
-    public function getBatch(): ?string
-    {
-        return $this->Batch;
-    }
-
-    public function setBatch(?string $Batch): self
-    {
-        $this->Batch = $Batch;
 
         return $this;
     }
@@ -132,5 +115,9 @@ class Major
         }
 
         return $this;
+    }
+
+    public function __toString() {
+        return $this->getMajorName();
     }
 }
