@@ -34,6 +34,20 @@ class ScoreRepository extends ServiceEntityRepository
         ;
     }
 
+    public function findScoreByStudentIdAndSubjectId($studentId, $subjectId){
+        return $this->createQueryBuilder("s")
+            ->setParameters(
+                [
+                    'studentId' => $studentId,
+                    'subjectId' => $subjectId
+                ]
+            )
+            ->where("s.StudentID = :studentId")
+            ->andWhere("s.SubjectID = :subjectId")
+            ->getQuery()
+            ->getResult();
+    }
+
     /*
     public function findOneBySomeField($value): ?Score
     {
