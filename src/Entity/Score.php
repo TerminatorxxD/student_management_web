@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\ScoreRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Form\FormTypeInterface;
 
 /**
  * @ORM\Entity(repositoryClass=ScoreRepository::class)
@@ -48,7 +49,7 @@ class Score
         return $this->StudentID;
     }
 
-    public function setStudentID(?Student $StudentID): self
+    public function setStudentID($StudentID): self
     {
         $this->StudentID = $StudentID;
 
@@ -60,7 +61,7 @@ class Score
         return $this->SubjectID;
     }
 
-    public function setSubjectID(Subject $SubjectID): self
+    public function setSubjectID($SubjectID): self
     {
         $this->SubjectID = $SubjectID;
 

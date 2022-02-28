@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <a class="btn btn-default">Back to Score List</a>
+    <hr/>
+    <h2 class="page-header">{{ sco.StudentID }}</h2>
+    <ul class="list-group">
+        <li class="list-group-item">: {{ sco.StudentID }}</li>
+        <li class="list-group-item">: {{ sco.SubjectID }}</li>
+        <li class="list-group-item">: <strong>{{ sco.Score }}</strong></li>
+    </ul>
+    <p>{{ sco.description }}</p>
+{% endblock %}

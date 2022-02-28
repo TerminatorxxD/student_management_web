@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Cars list</h1>
+    <h1>Score list</h1>
 {#    <a href="{{ path('car_index') }}">Car Show</a>#}
 {#    <a href="{{ path('car_desc') }}">Car Desc</a>#}
 {#    <a href="{{ path('car_asc') }}">Car Asc</a>#}
@@ -9,6 +9,7 @@
         <thead>
         <tr>
             <th>Student ID</th>
+{#            <th>Student Name</th>#}
             <th>Subject ID</th>
             <th>Score</th>
         </tr>
@@ -18,6 +19,7 @@
             <tr>
 {#                <td><a href="{{ path('car_show', { 'id': car.id }) }}">{{ car.id }}</a></td>#}
                 <td>{{ score.StudentID }}</td>
+{#                <td>{{ score.StudentIDgetfullname() }}</td>#}
                 <td>{{ score.SubjectID }}</td>
                 <td>{{ score.score }}</td>
             </tr>
