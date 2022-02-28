@@ -22,7 +22,7 @@ class Score
      * @ORM\Id
      * @ORM\Column(type="integer")
      * @ORM\ManyToOne(targetEntity=Student::class, inversedBy="scores")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=false, name="student_id", referencedColumnName="id")
      */
     private $StudentID;
 
