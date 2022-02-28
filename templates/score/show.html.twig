@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Score</h1>
+
+    <table>
+        <tbody>
+        <tr>
+            <th>StudentID</th>
+            <td>{{ score.StudentID }}</td>
+        </tr>
+        <tr>
+            <th>SubjectID</th>
+            <td>{{ score.SubjectID }}</td>
+        </tr>
+        <tr>
+            <th>Score</th>
+            <td>{{ score.Score }}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('score') }}">Back to score list</a>
+        </li>
+    </ul>
+{% endblock %}

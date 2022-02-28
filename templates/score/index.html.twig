@@ -9,17 +9,15 @@
         <thead>
         <tr>
             <th>Student ID</th>
-{#            <th>Student Name</th>#}
             <th>Subject ID</th>
             <th>Score</th>
+            <th><a href="{{ path('score_create') }} " class='btn btn-success'>Create</a></th>
         </tr>
         </thead>
         <tbody>
         {% for score in scores %}
             <tr>
-{#                <td><a href="{{ path('car_show', { 'id': car.id }) }}">{{ car.id }}</a></td>#}
                 <td>{{ score.StudentID }}</td>
-{#                <td>{{ score.StudentIDgetfullname() }}</td>#}
                 <td>{{ score.SubjectID }}</td>
                 <td>{{ score.score }}</td>
             </tr>
